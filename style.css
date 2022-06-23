@@ -1,0 +1,162 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(8, 8, 8);;
+}
+
+.container {
+    display: flex;
+}
+
+.p-heading {
+    font-size: 2rem;
+    font-family: 'Smooch', cursive;
+    /* font-family: 'Baloo Bhai 2', cursive; */
+    margin: 25px 10px;
+    padding-left: 7px;
+    color: red;
+}
+
+.sidebar {
+    position: absolute;
+    background: rgb(204, 241, 117);
+    /* width: 12vw; */
+    /* width: 200px; */
+    height: 100vh;
+    transition: transform 300ms ease-out;
+}
+
+.sidebar nav {
+    padding: 40px 10px;
+}
+
+.sidebar nav li {
+    padding: 30px 5px;
+    /* text-decoration: none */
+    list-style: none;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+    transition: transform 700ms ease-in;
+}
+
+.sidebar nav li:hover {
+    transform: scale(1.1);
+}
+.sidebar nav li a{
+    text-decoration: none;
+    color: rgb(252, 83, 5);
+}
+
+.sidebar nav li:last-child {
+    padding: 25px 5px;              
+}
+
+.main {
+    background-color: rgb(8, 8, 8);
+    width: 88vw;
+    height: 100vh;
+    font-family: 'Bree Serif', serif;
+}
+
+.infoContainer {
+    /* background-color: green;     */
+    height: 58vh;
+    width: 75vw;    
+    margin: 120px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.devInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.devInfo span{
+    color: Crimson;
+    font-size: 3rem;
+    font-weight: 580;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.intro {
+    font-size: 2.8rem;  
+    color: yellowgreen;
+}
+
+.name {
+    font-size: 2rem;
+    color: yellowgreen;
+}
+
+.about {
+    font-size: 1.5rem;   
+    margin-top: 0.5em; 
+    color: yellowgreen;
+}
+
+.buttons {
+    margin-top: 0.5em; 
+} 
+
+.buttons button {
+    margin: 0 0.2rem;
+    padding: 0.5rem 0.7rem;
+    border: 1px solid rgb(253, 2, 2);
+    border-radius: 15px;
+    color: rgb(253, 2, 2);
+    font-size: 0.8rem;
+    font-weight: bold; 
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color:yellowgreen;
+    color:white;
+}
+
+.devPic img {
+    height: 58vh;
+}
+
+.sidebarGoAway {
+    position: absolute;
+    transform: translate(-135px, 0);
+}
+
+.hamburger {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.cross {
+    margin-left: 5rem;
+}
+
+
+@media screen and (max-width:950px) {
+    :root {
+        font-size: 13px;
+    }
+    .buttons button {
+        margin: 0.2rem;
+        padding: 1rem;
+    }
+    /* .sidebar {
+        transform: translateX(-120px);
+        position: absolute;
+    } */
+    .devPic {
+        display: none;
+    }
+}    

@@ -1,0 +1,291 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(8, 8, 8);
+}
+
+.container {
+    display: flex;
+}
+
+.p-heading {
+    font-size: 2rem;
+    font-family: 'Smooch', cursive;
+    /* font-family: 'Baloo Bhai 2', cursive; */
+    margin: 25px 10px;
+    padding-left: 7px;
+    color: red;
+}
+
+.sidebar {
+    position: absolute;
+    background: rgb(204, 241, 117);
+    /* width: 12vw; */
+    /* width: 200px; */
+    height: 100vh;
+    transition: transform 300ms ease-out;
+}
+
+.sidebar nav {
+    padding: 40px 10px;
+}
+
+.sidebar nav li {
+    padding: 30px 5px;
+    /* text-decoration: none */
+    list-style: none;
+    font-family: 'Lobster', cursive;
+    font-size: 1.5rem;
+    transition: transform 300ms ease-in;
+}
+
+.sidebar nav li:hover {
+    transform: scale(1.1);
+}
+.sidebar nav li a{
+    text-decoration: none;
+    color: rgb(252, 83, 5);
+}
+
+.sidebar nav li:last-child {
+    padding: 25px 5px;              
+}
+
+.main {
+    background-color: rgb(8, 8, 8);
+    width: 88vw;
+    height: 100vh;
+    font-family: 'Bree Serif', serif;
+    display: grid;
+}
+
+.h-heading {
+    font-size: 1.5rem;
+    color: yellowgreen;
+    /* text-align: center; */
+    margin: 1.3rem;
+    margin-left: 6rem;
+    font-family: 'Bree Serif', serif;
+}
+
+p {
+    font-size: 1rem;
+    /* font-family: 'Smooch', cursive; */
+    font-family: 'Baloo Bhai 2', cursive;
+    margin: 0.5rem;
+    margin-left: 7rem; 
+    /* padding-left: 7px; */
+    color: red;
+}
+
+.my {
+    margin: 0 0.8em;
+}
+
+.mb {
+    margin-bottom: 0;
+}
+
+.skill-sets {
+    display: grid;
+    height: auto;
+    place-items: center;
+    grid-auto-columns: auto;
+}
+
+.skill-bar {
+    width: 50vw;
+    background-color: rgb(8, 8, 8);
+    border-radius: 10px;
+    padding: 25px 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skill-bar .bar {
+    margin: 15px 5px;
+}
+
+.skill-bar .bar:first-child {
+    margin-top: 0;
+}
+
+.skill-bar .bar:last-child {
+    margin-bottom: 0;
+}
+
+.info {
+    margin-bottom: 5px;
+    color: yellowgreen;
+}
+
+.progress-line {
+    position: relative;
+    height: 0.5rem;
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    transform: scale(0);
+    transform-origin: left;
+    animation: progressLineAnimation1 800ms ease-out forwards;
+    box-shadow: inset   0px 1px 1px rgba(0, 0, 0, 0.5),
+                        0px 1px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes progressLineAnimation1 {
+    100% {
+        transform: scale(1);
+    }
+}
+
+.progress-line span {
+    position: absolute;
+    height: 100%;
+    /* width: 80%; */
+    background: rgb(216, 35, 3);
+    border-radius: 10px;
+    transform: scale(0);
+    transform-origin: left;
+    animation: progressLineAnimation2 800ms 1000ms ease-out forwards;
+}
+
+.progress-line.html span {
+    width: 40%;
+}
+
+.progress-line.css span {
+    width: 30%;
+}
+
+.progress-line.javascript span {
+    width: 30%;
+}
+
+.progress-line.nodejs span {
+    width: 25%;
+}
+
+.progress-line.reactjs span {
+    width: 35%;
+}
+
+@keyframes progressLineAnimation2 {
+    100% {
+        transform: scale(1);
+    }
+}
+.progress-line span::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText 700ms ease-out forwards;
+}
+
+.progress-line span::after {
+    position: absolute;
+    /* content: ""; */
+    color: #fff;
+    top: -24px;
+    right: 0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2em 0.3em;
+    background: #000;
+    border-radius: 5px;
+    opacity: 0;
+    animation: showText 700ms ease-out forwards;
+}
+
+.progress-line.html span::after {
+    content: "40%";
+}
+
+.progress-line.css span::after {
+    content: "30%";
+}
+
+.progress-line.javascript span::after {
+    content: "30%";
+}
+
+.progress-line.nodejs span::after {
+    content: "25%";
+}
+
+.progress-line.reactjs span::after {
+    content: "35%";
+}
+
+@keyframes showText {
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .detailedProficiency {
+        display: none;
+    }
+    .progress-line.html span::after {
+        content: "";
+    }
+    
+    .progress-line.css span::after {
+        content: "";
+    }
+    
+    .progress-line.javascript span::after {
+        content: "";
+    }
+    
+    .progress-line.nodejs span::after {
+        content: "";
+    }
+    
+    .progress-line.reactjs span::after {
+        content: "";
+    }
+}
+
+.sidebarGoAway {
+    position: absolute;
+    transform: translate(-135px, 0);
+}
+
+.hamburger {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.cross {
+    margin-left: 5rem;
+}
+
+@media screen and (max-width:950px) {
+    :root {
+        font-size: 13px;
+    }
+    .buttons button {
+        margin: 0.2rem;
+        padding: 1rem;
+    }
+    .sidebar {
+        transform: translateX(-120px);
+        position: absolute;
+    }
+}    

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Jha - Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Smooch&display=swap" rel="stylesheet">
+    <style>
+        @import url('./contact.css');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebarGoAway sidebar">
+            <h4 class="p-heading">Vivek</h4>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/intro.html">My Intro</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="hamburger">
+                <img src="/ham-red.png" alt="Menu" class="ham" width="25">
+                <img src="/close_box_red.png" alt="Close" class="cross" width="25">
+            </div>
+            <p>Contact me for Work/Business or any queries...</p>
+            <div class="contact-form">
+                <form action="">
+                    <div class="mb-3 form-flex">
+                        <label for="clientname" class="form-label">Name</label>
+                        <input type="name" class="form-control" id="clientname" aria-describedby="nameHelp">
+                    </div>
+                    <div class="mb-3 form-flex">
+                        <label for="clientemail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="clientemail" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email and contact info with anyone else.</div>
+                    </div>
+                    <div class="mb-3 form-flex">
+                        <label for="clientphone" class="form-label">Phone</label>
+                        <input type="phone" class="form-control" id="clientphone">
+                    </div>
+                    <div class="mb-3 form-flex">
+                        <label for="clientenquiry" class="form-label">Enquiry Keyword</label>
+                        <input type="enquiry" class="form-control" id="clientenquiry">
+                    </div>
+                    <div class="mb-3">
+                        <input type="checkbox" class="form-check-input" id="isclient">
+                        <label class="form-check-label" id="isclient">I want you to work on a Project with me.</label>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+
+</html>
